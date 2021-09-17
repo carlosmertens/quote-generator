@@ -1,17 +1,15 @@
-# TEMPLATE (vanilla project)
+# QUOTES GENERATOR 😎
 
-## FILES
+## DESCRIPTION
 
-Create `index.html`, `style.css`, `index.js` and `README.md`
+Simple quotes generator
 
-## LINKS
+## SKILLS
 
-Links files together, cdn for font-awesome and favicon css-tricks
+- Basic styling and responsive design
+- Work with external API
+- Resolve Coors Policy issues
 
-## STYLE
+## AUTHOR
 
-Give `box-sizing: border-box` to the HTML element, `margin: 0` and `min-height: 100vh` to the body element
-
-## TEST
-
-Add `console.log(testing')` in the js file
+- **Carlos Mertens | Web Developer** - _Mertens-Applications [Founder & CEO]_
