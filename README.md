@@ -11,6 +11,7 @@ Simple quotes generator
 - Work with external API
   - Call Random Quotes API
   - Use Try and Catch
+  - Use Twitter Developer Platform
 - Resolve Coors Policy issues
 
 ## ACKNOWLEDGMENT AND LINKS
@@ -20,6 +21,7 @@ Simple quotes generator
 [Google Favicon Service](https://css-tricks.com/favicons-next-to-external-links/)
 [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=close&m=free)
 [Random Quotes](https://type.fit/api/quotes)
+[Twitter Developer Platform](https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/web-intent)
 
 ## AUTHOR
 

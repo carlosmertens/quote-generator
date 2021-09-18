@@ -40,8 +40,8 @@ async function getApiQuotes() {
   }
 }
 
-// Function to link button to twitter
-function pushTwitter() {
+// Function to tweet quote
+function pushTweet() {
   const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${quoteAuthor.textContent}`;
   window.open(twitterUrl, '_blank');
 }
@@ -52,7 +52,7 @@ newQuoteBtn.addEventListener('click', () => {
 });
 
 // "Twitter" button functionality (event listener)
-twitterBtn.addEventListener('click', pushTwitter);
+twitterBtn.addEventListener('click', pushTweet);
 
 // On page load
 getApiQuotes();
