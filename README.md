@@ -7,8 +7,8 @@ Simple quotes generator
 ## SKILLS
 
 - Basic styling and responsive design
-  - Use external background, fonts, favicon catcher, icons
-- Work with external API
+  - Use external background, fonts, favicon catcher, icons, loader
+- Fetch and handle external API
   - Call Random Quotes API
   - Use Try and Catch
   - Use Twitter Developer Platform
@@ -22,6 +22,7 @@ Simple quotes generator
 [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=close&m=free)
 [Random Quotes](https://type.fit/api/quotes)
 [Twitter Developer Platform](https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/web-intent)
+[W3Schhols loaders](https://www.w3schools.com/howto/howto_css_loader.asp)
 
 ## AUTHOR
 
