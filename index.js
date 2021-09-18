@@ -3,11 +3,25 @@ const quoteText = document.getElementById('quote');
 const quoteAuthor = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
 const newQuoteBtn = document.getElementById('new-quote');
+const loader = document.getElementById('loader');
 
 let apiQuotes = [];
 
+// Function to set loader
+function loading() {
+  quoteContainer.hidden = true;
+  loader.hidden = false;
+}
+
+// Function to stop loader
+function loadingComplete() {
+  quoteContainer.hidden = false;
+  loader.hidden = true;
+}
+
 // Function to randonly choose a single quote
 function getSingleQuote(arrayQuotes = apiQuotes) {
+  loading();
   // Pick a random quote using built-in Math function
   const singleQuote =
     arrayQuotes[Math.floor(Math.random() * arrayQuotes.length)];
@@ -24,10 +38,12 @@ function getSingleQuote(arrayQuotes = apiQuotes) {
     quoteText.classList.remove('long-quote');
   }
   quoteText.textContent = singleQuote['text'];
+  loadingComplete();
 }
 
 // Function to get quotes from external API or local API
 async function getApiQuotes() {
+  loading();
   const apiUrl = 'https://type.fit/api/quotes';
   try {
     const response = await fetch(apiUrl);
@@ -42,7 +58,7 @@ async function getApiQuotes() {
 
 // Function to tweet quote
 function pushTweet() {
-  const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${quoteAuthor.textContent}`;
+  const twitterUrl = `https://twitter.com/intent/tweet?text="${quoteText.textContent}" - ${quoteAuthor.textContent}`;
   window.open(twitterUrl, '_blank');
 }
 
