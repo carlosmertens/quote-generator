@@ -2,12 +2,12 @@ const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
 const quoteAuthor = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
-const newQuote = document.getElementById('new-quote');
+const newQuoteBtn = document.getElementById('new-quote');
 
 let apiQuotes = [];
 
 // Function to randonly choose a single quote
-function getSingleQuote(arrayQuotes) {
+function getSingleQuote(arrayQuotes = apiQuotes) {
   // Pick a random quote using built-in Math function
   const singleQuote =
     arrayQuotes[Math.floor(Math.random() * arrayQuotes.length)];
@@ -39,6 +39,20 @@ async function getApiQuotes() {
     }
   }
 }
+
+// Function to link button to twitter
+function pushTwitter() {
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${quoteAuthor.textContent}`;
+  window.open(twitterUrl, '_blank');
+}
+
+// "New quote" buttom functionality (event listener)
+newQuoteBtn.addEventListener('click', () => {
+  getSingleQuote();
+});
+
+// "Twitter" button functionality (event listener)
+twitterBtn.addEventListener('click', pushTwitter);
 
 // On page load
 getApiQuotes();
