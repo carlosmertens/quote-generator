@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap');
 
 html {
   box-sizing: border-box;
@@ -7,7 +7,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
   text-align: center;
   background-color: #f5f5f5;
@@ -35,7 +35,7 @@ body {
 }
 
 .long-quote {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .quote-author {
