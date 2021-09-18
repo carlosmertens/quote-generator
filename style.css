@@ -21,7 +21,7 @@ body {
   width: auto;
   max-width: 56rem;
   padding: 1.25rem 1.8rem;
-  border-radius: 0.6rem;
+  border-radius: 0.4rem;
   background-color: rgba(255, 255, 255, 0.4);
   box-shadow: 0 0.6rem 0.6rem 0.6rem rgba(0, 0, 0, 0.2);
 }
@@ -43,6 +43,42 @@ body {
   font-weight: 400;
   font-style: italic;
   margin-top: 1rem;
+}
+
+.button-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  height: 2.5rem;
+  border: none;
+  color: #f5f5f5;
+  background-color: #333;
+  outline: none;
+  padding: 0.5rem 1.8rem;
+  box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
+}
+
+button:hover {
+  filter: brightness(130%);
+}
+
+button:active {
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+}
+
+.twitter-button:hover {
+  color: #1da1f2;
+}
+
+.fa-twitter {
+  font-size: 1.5rem;
 }
 
 /* Media Query: Tablet or smaller */
