@@ -14,7 +14,7 @@ Simple quotes generator
   - Call Random Quotes API
   - Use Try and Catch
   - Use Twitter Developer Platform
-- Resolve Coors Policy issues
+- Resolve Coors Policy issues using a proxy
 
 ## ACKNOWLEDGMENT AND LINKS
 
@@ -25,6 +25,7 @@ Simple quotes generator
 - [Random Quotes](https://type.fit/api/quotes)
 - [Twitter Developer Platform](https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/web-intent)
 - [W3Schhols loaders](https://www.w3schools.com/howto/howto_css_loader.asp)
+- [cors-anywhere](https://github.com/Rob--W/cors-anywhere/#documentation) -[3 way to fix the cors error - Blog](https://medium.com/@dtkatz/3-ways-to-fix-the-cors-error-and-how-access-control-allow-origin-works-d97d55946d9)
 
 ## AUTHOR
 
