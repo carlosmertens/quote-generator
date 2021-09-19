@@ -44,8 +44,12 @@ function getSingleQuote(arrayQuotes = apiQuotes) {
 // Function to get quotes from external API or local API
 async function getApiQuotes() {
   loading();
+  // ***** Use if there is a cors error with an external API *****
+  // Using fix "cors-anywhere" from Herokuapp.com
+  // const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
   const apiUrl = 'https://type.fit/api/quotes';
   try {
+    // const response = await fetch(proxyUrl + apiUrl):
     const response = await fetch(apiUrl);
     apiQuotes = await response.json();
     getSingleQuote(apiQuotes);
