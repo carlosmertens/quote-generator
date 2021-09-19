@@ -7,21 +7,18 @@ const loader = document.getElementById('loader');
 
 let apiQuotes = [];
 
-// Function to set loader
-function loading() {
+function showSpinner() {
   quoteContainer.hidden = true;
   loader.hidden = false;
 }
 
-// Function to stop loader
-function loadingComplete() {
+function hideSpinner() {
   quoteContainer.hidden = false;
   loader.hidden = true;
 }
 
-// Function to randonly choose a single quote
 function getSingleQuote(arrayQuotes = apiQuotes) {
-  loading();
+  showSpinner();
   // Pick a random quote using built-in Math function
   const singleQuote =
     arrayQuotes[Math.floor(Math.random() * arrayQuotes.length)];
@@ -38,12 +35,11 @@ function getSingleQuote(arrayQuotes = apiQuotes) {
     quoteText.classList.remove('long-quote');
   }
   quoteText.textContent = singleQuote['text'];
-  loadingComplete();
+  hideSpinner();
 }
 
-// Function to get quotes from external API or local API
 async function getApiQuotes() {
-  loading();
+  showSpinner();
   // ***** Use if there is a cors error with an external API *****
   // Using fix "cors-anywhere" from Herokuapp.com
   // const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
@@ -61,18 +57,15 @@ async function getApiQuotes() {
   }
 }
 
-// Function to tweet quote
 function pushTweet() {
   const twitterUrl = `https://twitter.com/intent/tweet?text="${quoteText.textContent}" - ${quoteAuthor.textContent}`;
   window.open(twitterUrl, '_blank');
 }
 
-// "New quote" buttom functionality (event listener)
+// Button's addEventListener functions
 newQuoteBtn.addEventListener('click', () => {
   getSingleQuote();
 });
-
-// "Twitter" button functionality (event listener)
 twitterBtn.addEventListener('click', pushTweet);
 
 // On page load
