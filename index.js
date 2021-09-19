@@ -49,6 +49,7 @@ async function getApiQuotes() {
   // const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
   const apiUrl = 'https://type.fit/api/quotes';
   try {
+    // ***** Use if there is a cors error with an external API *****
     // const response = await fetch(proxyUrl + apiUrl):
     const response = await fetch(apiUrl);
     apiQuotes = await response.json();
